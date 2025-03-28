@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Utility Generator</h1>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+
+        <!-- UUID Generator -->
+        <div class="card" id="uuid-generator">
+            <h2>Generate UUID</h2>
+            <button id="generate-uuid">Generate UUID</button>
+            <div id="uuid-result" class="result"></div>
+            <button id="copy-uuid" class="copy-btn" style="display: none;">Copy UUID</button>
+        </div>
+
+        <!-- Password Generator -->
+        <div class="card" id="password-generator">
+            <h2>Generate Password</h2>
+            <select id="password-length">
+                <option value="16">16 characters</option>
+                <option value="32">32 characters</option>
+                <option value="64">64 characters</option>
+                <option value="128">128 characters</option>
+            </select>
+            <div class="checkboxes">
+                <label>
+                    <input type="checkbox" id="include-lowercase" checked> Include Lowercase
+                </label>
+                <label>
+                    <input type="checkbox" id="include-uppercase" checked> Include Uppercase
+                </label>
+                <label>
+                    <input type="checkbox" id="include-numbers" checked> Include Numbers
+                </label>
+                <label>
+                    <input type="checkbox" id="include-symbols"> Include Symbols
+                </label>
+            </div>
+            <button id="generate-password">Generate Password</button>
+            <div id="password-result" class="result"></div>
+            <button id="copy-password" class="copy-btn" style="display: none;">Copy Password</button>
+        </div>
+
+        <!-- QR Code Generator -->
+        <div class="card" id="qr-code-generator">
+            <h2>Generate QR Code</h2>
+            <input type="text" id="qr-code-text" placeholder="Enter text for QR Code">
+            <button id="generate-qr-code">Generate QR Code</button>
+            <div id="qr-code-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
