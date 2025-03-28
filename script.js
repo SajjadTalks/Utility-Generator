@@ -40,15 +40,29 @@ class UtilityGenerator {
 
 // Theme Toggle
 const themeToggle = document.getElementById('theme-toggle');
+const htmlElement = document.documentElement;
+
 themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-theme');
-    localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
+    // Toggle between light and dark themes
+    if (htmlElement.classList.contains('light-theme')) {
+        htmlElement.classList.remove('light-theme');
+        htmlElement.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        htmlElement.classList.remove('dark-theme');
+        htmlElement.classList.add('light-theme');
+        localStorage.setItem('theme', 'light');
+    }
 });
 
 // Restore theme on page load
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark-theme');
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        htmlElement.classList.remove('light-theme');
+        htmlElement.classList.add('dark-theme');
+    }
+});
 
 // UUID Generator
 const uuidGenerateBtn = document.getElementById('generate-uuid');

@@ -4,6 +4,7 @@
     --text-primary: #0c4a6e;
     --text-secondary: #333;
     --border-color: #e0e0e0;
+    --theme-toggle-bg: #e0e0e0;
 }
 
 .dark-theme {
@@ -12,6 +13,7 @@
     --text-primary: #e0f2fe;
     --text-secondary: #f0f9ff;
     --border-color: #1e40af;
+    --theme-toggle-bg: #1e3a8a;
 }
 
 body {
@@ -38,6 +40,46 @@ body {
 
 h1 {
     color: var(--text-primary);
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background-color: var(--theme-toggle-bg);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+#theme-toggle .moon {
+    color: #1e40af;
+}
+
+#theme-toggle .sun {
+    color: #fbbf24;
+}
+
+.theme-icon {
+    display: none;
+}
+
+.dark-theme #moon-icon {
+    display: block;
+}
+
+.light-theme #sun-icon {
+    display: block;
 }
 
 .card {
@@ -96,8 +138,16 @@ select, input[type="text"] {
     margin-top: 10px;
 }
 
+#qr-code-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
 #qr-code-container img {
     max-width: 100%;
     height: auto;
-    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,14 @@
     <div class="container">
         <div class="header">
             <h1>Utility Generator</h1>
-            <button id="theme-toggle">Toggle Theme</button>
+            <button id="theme-toggle">
+                <svg id="sun-icon" class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m3.343-5.657L5.636 5.636m11.314 11.314 1.414 1.414M6.343 5.657 5.636 5.636m11.314 11.314 1.414 1.414M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg id="moon-icon" class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20.354 15.354A9 9 0 0 1 8.646 3.646 9.003 9.003 0 0 0 12 21a9.003 9.003 0 0 0 8.354-5.646z"/>
+                </svg>
+            </button>
         </div>
 
         <!-- UUID Generator -->
