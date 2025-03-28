@@ -6,11 +6,8 @@ A powerful, lightweight web utility generator built as a Cloudflare Worker, offe
 
 ![Cloudflare Workers](https://img.shields.io/badge/deployment-Cloudflare%20Workers-f38020)   
 
+[Demo](https://utility-generator.mrsajjad25842.workers.dev/)
 
-<p align="center">
- <img src="https://github.com/user-attachments/assets/19f25fa2-454f-42d3-994e-f1f96e1f1bc7" width="500" height="700">
-  <img src="https://github.com/user-attachments/assets/7056eb45-1625-4fca-a89e-54486dcb13f8" width="500" height="700">
-</p>
 
 ## 🌟 Features
 
